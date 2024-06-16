@@ -312,6 +312,8 @@ bindsym $mod+Print exec flameshot gui
 # start a terminal
 bindsym $mod+Return exec kitty
 
+bindsym $mod+Shift+Return exec "kitty sh -c 'tmux has-session -t home 2>/dev/null || tmux new-session -s home; tmux attach -t home'"
+
 # ibus
 bindsym $mod+Shift+b exec blueman-manager
 
