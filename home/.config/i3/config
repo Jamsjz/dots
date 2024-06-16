@@ -217,8 +217,11 @@ assign [class="Blueman-manager"] $ws8
 for_window [class=Blueman-manager] focus
 
 # ws9 spotify
-assign [class="spotube"] $ws9
-for_window [class=spotube] focus
+assign [class="Spotube"] $ws9
+for_window [class=Spotube] focus
+
+assign [class="Spotify"] $ws9
+for_window [class=Spotify] focus
 
 
 ##############################
@@ -358,11 +361,10 @@ exec --no-startup-id firefox &
 exec --no-startup-id firefox --new-window "messenger.com" &
 exec --no-startup-id nautilus
 exec --no-startup-id kitty sh -c 'tmux has-session -t home 2>/dev/null || tmux new-session -s home; tmux attach -t home'
-exec --no-startup-id env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify --uri=%U
 exect --no-startup-id flatpak run com.github.KRTirtho.Spotube
-exec --no-startup-id libreoffice
-exec --no-startup-id gimp
-exec --no-startup-id anaconda-navigator
+# exec --no-startup-id libreoffice
+# exec --no-startup-id gimp
+# exec --no-startup-id anaconda-navigator
 
 #############################################
 # xorg commands
@@ -371,7 +373,7 @@ exec xset s -dpms
 exec xset s off
 
 # compositor
-exec picom
+exec picom --experimental-backend
 
 # Notification Daemon
 exec dunst
