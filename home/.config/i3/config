@@ -1,9 +1,7 @@
 
 exec --no-startup-id setxkbmap -option caps:escape us
-exec --no-startup-id xrdb -merge ~/.Xresources
-exec --no-startup-id xset r rate 200 35
 exec --no-startup-id /usr/lib/gsd-xsettings
-bindsym Ctrl exec xdotool key 9
+exec --no-startup-id xset r rate 200 35
 #################################### MY MODS ####################################
 focus_follows_mouse yes
 focus_wrapping no
@@ -83,7 +81,8 @@ bindsym $mod+7    workspace  $ws7
 bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
 bindsym $mod+0    workspace  $ws0
-
+bindsym --whole-window $mod+button5 workspace next_on_output
+bindsym --whole-window $mod+button4 workspace prev_on_output
 
 # move focused container to workspace
 bindsym $mod+Shift+1    move container to workspace  $ws1
@@ -160,8 +159,8 @@ for_window [class=discord] focus
 assign [class="Slack"] $ws5
 for_window [class=Slack] focus
 
-assign [title="Messenger — Mozilla Firefox"] $ws5
-for_window [title="Messenger — Mozilla Firefox"] focus
+assign [class="firefox" title="Messenger — Mozilla Firefox"] $ws5
+for_window [class="firefox" title="Messenger — Mozilla Firefox"] focus
 # (W-6)
 # ========== Graphics Editor ===========
 assign [class="Inkscape"] $ws6
@@ -363,7 +362,7 @@ exec --no-startup-id firefox &
 exec --no-startup-id firefox --new-window "messenger.com" &
 exec --no-startup-id nautilus
 exec --no-startup-id kitty sh -c 'tmux has-session -t home 2>/dev/null || tmux new-session -s home; tmux attach -t home'
-exect --no-startup-id flatpak run com.github.KRTirtho.Spotube
+exec --no-startup-id sh -c 'flatpak run com.github.KRTirtho.Spotube'
 # exec --no-startup-id libreoffice
 # exec --no-startup-id gimp
 # exec --no-startup-id anaconda-navigator
