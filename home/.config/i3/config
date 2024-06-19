@@ -363,6 +363,7 @@ exec --no-startup-id firefox --new-window "messenger.com" &
 exec --no-startup-id nautilus
 exec --no-startup-id kitty sh -c 'tmux has-session -t home 2>/dev/null || tmux new-session -s home; tmux attach -t home'
 exec --no-startup-id sh -c 'flatpak run com.github.KRTirtho.Spotube'
+exec --no-startup-id libinput-gestures-setup start
 # exec --no-startup-id libreoffice
 # exec --no-startup-id gimp
 # exec --no-startup-id anaconda-navigator

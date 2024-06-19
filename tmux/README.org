@@ -8,8 +8,8 @@ This configuration file customizes tmux to enhance your terminal multiplexer exp
 ** Kill Session
 
 #+begin_src conf :tangle .tmux.conf
-bind -n M-k kill-session
-bind -n M-K kill-server
+bind -n M-P kill-session
+bind -n M-T kill-server
 #+end_src
 ** Switch sessions
 #+begin_src conf :tangle .tmux.conf
