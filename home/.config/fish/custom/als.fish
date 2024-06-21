@@ -37,7 +37,6 @@ alias pbcopy='xsel --input --clipboard'
 alias pbpaste='xsel --output --clipboard'
 alias cmoi='chezmoi'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias lgc='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ff='fastfetch'
 
 # Command Not Found Handler
@@ -106,6 +105,5 @@ alias mkdir='mkdir -p'
 # Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
 alias ssh='kitten ssh'
 
-alias lg='lazygit --use-config-file="<config-dir>/config.yml,mocha.yml"'
 
 alias nv.p='NVIM_APPNAME=nvim-primeagen nvim'
