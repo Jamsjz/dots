@@ -107,3 +107,4 @@ alias ssh='kitten ssh'
 
 
 alias nv.p='NVIM_APPNAME=nvim-primeagen nvim'
+alias rmpy='export PATH=/usr/bin:/usr/local/bin:$PATH'
