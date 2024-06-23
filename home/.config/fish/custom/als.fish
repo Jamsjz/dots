@@ -1,4 +1,7 @@
 # Aliases
+alias c='cargo'
+alias cr='cargo run'
+alias cc='cargo check'
 alias cls='clear'
 alias lg='lazygit'
 alias loff='libreoffice'
